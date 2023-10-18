@@ -1,4 +1,5 @@
 import 'package:cupcake_app/common/DTO/selling_item.dart';
+import 'package:cupcake_app/common/Dialogs.dart';
 import 'package:cupcake_app/common/customized_text.dart';
 import 'package:cupcake_app/common/flavors.dart';
 import 'package:cupcake_app/screens/order/order_summary.dart';
@@ -166,6 +167,8 @@ class _PickDateState extends State<PickDate> {
                       backgroundColor: Colors.cyan.shade900),
                   onPressed: () {
                     if (selected == null) {
+                      showInfo(context, "Choose a Pickup Date",
+                          "Please choose a pickup date so you can proceed");
                       return;
                     }
                     Navigator.pop(context);

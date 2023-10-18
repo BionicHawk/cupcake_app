@@ -1,3 +1,4 @@
+import 'package:cupcake_app/common/Dialogs.dart';
 import 'package:cupcake_app/common/customized_text.dart';
 import 'package:cupcake_app/screens/Date/pick_a_date.dart';
 import 'package:flutter/material.dart';
@@ -141,6 +142,8 @@ class _FlavorPageState extends State<FlavorPage> {
                     backgroundColor: Colors.cyan.shade900),
                 onPressed: () {
                   if (selected == null) {
+                    showInfo(context, "Please choose a flavor",
+                        "You can't proceed without choosing a flavor");
                     return;
                   }
                   Navigator.pop(context);

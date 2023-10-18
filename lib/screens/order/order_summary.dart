@@ -1,4 +1,5 @@
 import 'package:cupcake_app/common/DTO/selling_item.dart';
+import 'package:cupcake_app/common/dialogs.dart';
 import 'package:cupcake_app/common/flavors.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -77,10 +78,12 @@ class _OrderSummaryState extends State<OrderSummary> {
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.cyan.shade900),
                       onPressed: () async {
-                        // TODO
+                        await showInfo(context, "I send your request",
+                            "The order has been sended to the bakery");
+                        Navigator.pop(context);
                       },
                       child: const Text(
-                        "SEND ORDER TO ANOTHER APP",
+                        "SEND ORDER",
                         style: TextStyle(color: Colors.white),
                       )),
                 ),
